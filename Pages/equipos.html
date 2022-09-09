@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript_FC</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Torneo Regional Tai</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Tabla <span class="sr-only">(general)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Fixture</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Equipos participantes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Campeón</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="contenido1 p-1 pt-4 pb-3">
+        <section id="tablaPosicionesEquipos">
+            <h1>Posiciones Actuales</h1>
+            <div class="contenedor-clima">
+                <p>Clima Actual:</p>
+                <p id="clima"></p>
+              </div>
+            <div class=table1>
+                <table class="table table-light table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Equipo</th>
+                            <th scope="col">Partidos Jugados</th>
+                            <th scope="col">Puntos</th>
+                            <th scope="col">Ciudad de origen</th>
+                        </tr>
+                    </thead>
+                    <tbody id="equipoItem">
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <section id="agregarEquipo">
+            <div class="container">
+                <h2>Ingresa un nuevo Equipo</h2>
+                <p>Debe ingresar los datos actuales del equipo</p>
+                <div class="row">
+                    <form id="agregarForm" method="GET" enctype="multipart/form-data" class="row g-3" action="">
+                        <div class="col-m-3">
+                            <label for="agregarEq" class="form-label">Nombre de Equipo</label>
+                            <input type="text" class="form-control" value="" id="agregarEq" required>
+                        </div>
+                        <div class="col-m-1">
+                            <label for="agregarPj" class="form-label">Partidos Jugados</label>
+                            <input type="number" class="form-control" value="" id="agregarPj" required>
+                        </div>
+                        <div class="col-m-1">
+                            <label for="agregarPts" class="form-label">Puntos obtenidos</label>
+                            <input type="number" class="form-control" value="" id="agregarPts" required>
+                        </div>
+                        <div class="col-m-3">
+                            <label for="agregarCity" class="form-label">Ciudad de origen</label>
+                            <input type="text" class="form-control" value="" id="agregarCity" required>
+                        </div>
+                        <div class="col-mt-2 p-2 text-center">
+                            <button id="addEquipo" type="button" class="btn btn-primary">Agregar equipo</button>
+                        </div>
+                    </form>
+                </div>
+        </section>
+
+        <section id="eliminarEquipo">
+            <div class="container">
+                <h2>Eliminar un equipo</h2>
+                <p>Para eliminar un equipo, ingrese su nombre y ciudad de origen</p>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <form id="eliminarForm" action="#" method="GET" enctype="multipart/form-data" class="row ">
+                        <div class="col-m-4">
+                            <label for="eliminarNombre" class="form-label">Nombre de Equipo</label>
+                            <input type="text" class="form-control" id="eliminarNombre" required>
+                        </div>
+                        <div class="col-m-4">
+                            <label for="eliminarCiudad" class="form-label">Ciudad de origen</label>
+                            <input type="text" class="form-control" id="eliminarCiudad" required>
+                        </div>
+                </div>
+                <div class="col-mt-2 p-2 text-center">
+                    <button id="eliminarEqui" type="button" class="btn btn-danger">Eliminar Equipo</button>
+                </div>
+                </form>
+            </div>
+            </div>
+        </section>
+        </div>
+    </section>
+
+
+
+    <section>
+        <footer class=footerT id="pieDePagina">
+            <h3>Teléfono y horarios</h3>
+            <p class="telefonoHorario"> Teléfono de Contacto: (0351) 4653202 - 152285025. Email: taiel.94@hotmail.com
+            </p>
+            <h3>Horario</h3>
+            <p class="horario2">Lunes a Viernes de 09 a 18hs</p>
+    </section>
+    </footer>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./equipos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    
+</body>
+
+</html>
